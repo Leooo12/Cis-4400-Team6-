@@ -2,6 +2,10 @@
 
 This project analyzes the taxi and for-hire vehicle (FHV) data in New York City from July 2022 to December 2022.
 
+# Project Description
+
+Analysis of the Green Cab, Yellow Cab and for Hire Vehicle in New York City for the from July 2022 to December 2022 and the weather.
+
 # Project Milestones.
  
 February 28th, 2023   Requirements Gathering, Cost, Benefits, Risks
