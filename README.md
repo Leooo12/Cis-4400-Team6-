@@ -26,20 +26,7 @@ Weather data: https://open-meteo.com
 
 # Requirements for the UI
  
-Heat map for all 5 boroughs
-
-Most busiest hour, less busiest hours,
-
-revenue by taxi type
-
-Impact on the weather on the trafficRequirements for the UI,
-
- 
 Heat map for all 5 boroughs 
-
-Most busiest hour, less busiest hours,
-
+Most busiest hour, less busiest hours, 
 revenue by taxi type
-
 Impact on the weather on the traffic
-
