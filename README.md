@@ -5,7 +5,11 @@ This project analyzes the taxi and for-hire vehicle (FHV) data in New York City 
 Project Milestones.
  
 February 28th, 2023   Requirements Gathering, Cost, Benefits, Risks
+
 March 14th, 2023 Data Source, Dimensional Modeling
+
 March 28th, 2023, ETL, ELT
+
 April 11th, 2023   Visualization Tools
+
 April 30th, 2023   Final Review
