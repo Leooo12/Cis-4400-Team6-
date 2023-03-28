@@ -31,3 +31,20 @@ Most busiest hour, less busiest hours, 
 revenue by taxi type
 Impact on the weather on the traffic
 Test
+
+1) Business Problem
+ 
+Give a description of the company.
+Give the requirements and any missing requirements you have found.
+ 
+ 
+2) Business Impact
+ 
+ You will need to consider any risks, cost, and benefits that are related to this project.  How the persona, company will benefits from it?
+ 
+[It is useful if you can provide an estimated impact of your target/moonshot analysis. If things go exactly as planned, how much does your company beneﬁt? If things go much better than planned, how much does your company beneﬁt?]
+ 
+ 
+3) Business Persona
+ 
+Who are going to be the people who use the system? Who are the actors of the system?  
