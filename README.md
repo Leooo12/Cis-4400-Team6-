@@ -48,3 +48,24 @@ Give the requirements and any missing requirements you have found.
 # 3) Business Persona
  
 Who are going to be the people who use the system? Who are the actors of the system?  
+
+# 4) Data
+The data sources that you are going to use and the metadata associated with them.
+ 
+ 
+[Tell us (at least approximately) how large your dataset is. Highlight both the strengths and weaknesses of your dataset(s).]
+ 
+ 
+# 5) Methods
+In this section, we will highlight some of the key tools and elements of our tech stack that we will be using for this project. As we learn and build upon our skills during this program, we hope to add additional tools to this section and improve upon some of our initial assumptions.
+ 
+# 6) Data Tools
+Data Storage: What are the data storages that you are going to use.
+ 
+Data Processing: How are you going to process/ingest the data?
+ 
+Data Orchestration: Are you using any type of tools to automate your data pipeline
+ 
+# 7) Interface
+The final interface will be a web-based application where the Persona can visualize the results.  People should be able also to connect to your  data using Tableau/PowerBI and do their own analysis.
+ 
