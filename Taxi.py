@@ -40,8 +40,8 @@ for i in dates:
 print("All files have been downloaded.")
 
 
-session = boto3.Session(aws_access_key_id= "AKIAXQLWG3QZ2GMIEOMA", 
-                        aws_secret_access_key='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')
+session = boto3.Session(aws_access_key_id= "", 
+                        aws_secret_access_key='')
 s3 = session.client('s3')
 
 csv_files = glob.glob(os.path.join('taxi', "*.csv"))
