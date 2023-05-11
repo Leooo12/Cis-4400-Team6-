@@ -1,0 +1,48 @@
+CREATE SCHEMA `fhv `;
+
+CREATE  TABLE `fhv `.date_dim ( 
+	dateid               BIGINT  NOT NULL     PRIMARY KEY,
+	year                 VARCHAR(50)       ,
+	quarter              VARCHAR(50)       ,
+	month                VARCHAR(50)       ,
+	day                  VARCHAR(50)       ,
+	second               VARCHAR(50)       ,
+	pickup_datetime      DATE       ,
+	dropoff_datetime     DATE       
+ ) engine=InnoDB;
+
+CREATE  TABLE `fhv `.dispatching_base_dim ( 
+	dispatching_base_num VARCHAR(50)  NOT NULL     PRIMARY KEY
+ ) engine=InnoDB;
+
+CREATE  TABLE `fhv `.location_dim ( 
+	locationid           BIGINT  NOT NULL     PRIMARY KEY,
+	pulocationid         VARCHAR(50)       ,
+	dolocationid         VARCHAR(50)       
+ ) engine=InnoDB;
+
+CREATE  TABLE `fhv `.sharded_ride_flag_dim ( 
+	sr_flag_id           BIGINT  NOT NULL     PRIMARY KEY,
+	sr_flag              VARCHAR(50)       
+ ) engine=InnoDB;
+
+CREATE  TABLE `fhv `.trip_fact ( 
+	trip_id              BIGINT  NOT NULL     PRIMARY KEY,
+	num_trip             BIGINT       ,
+	trip_distance        DECIMAL       ,
+	trip_duration        DECIMAL       ,
+	fare_amounts         DECIMAL       ,
+	dispatching_base     VARCHAR(50)       ,
+	date_time            BIGINT       ,
+	location             BIGINT       ,
+	shared_ride_flag     BIGINT       
+ ) engine=InnoDB;
+
+ALTER TABLE `fhv `.trip_fact ADD CONSTRAINT fk_trip_fact_location_dim FOREIGN KEY ( location ) REFERENCES `fhv `.location_dim( locationid ) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+ALTER TABLE `fhv `.trip_fact ADD CONSTRAINT fk_trip_fact_sharded_ride_flag_dim FOREIGN KEY ( shared_ride_flag ) REFERENCES `fhv `.sharded_ride_flag_dim( sr_flag_id ) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+ALTER TABLE `fhv `.trip_fact ADD CONSTRAINT fk_trip_fact_date_dim FOREIGN KEY ( date_time ) REFERENCES `fhv `.date_dim( dateid ) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+ALTER TABLE `fhv `.trip_fact ADD CONSTRAINT fk_trip_fact_dispatching_base_dim FOREIGN KEY ( dispatching_base ) REFERENCES `fhv `.dispatching_base_dim( dispatching_base_num ) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
