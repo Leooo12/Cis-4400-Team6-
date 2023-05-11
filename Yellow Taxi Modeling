@@ -1,0 +1,70 @@
+CREATE SCHEMA `yellow taxi`;
+
+CREATE  TABLE `yellow taxi`.location_dim ( 
+	locationid           BIGINT  NOT NULL     PRIMARY KEY,
+	pulocationid         BIGINT       ,
+	dolcationid          BIGINT       
+ ) engine=InnoDB;
+
+CREATE  TABLE `yellow taxi`.passenger_dim ( 
+	passenger_id         BIGINT  NOT NULL     PRIMARY KEY,
+	passenger_count      BIGINT       
+ ) engine=InnoDB;
+
+CREATE  TABLE `yellow taxi`.payment_dim ( 
+	paymentid            BIGINT  NOT NULL     PRIMARY KEY,
+	payment_type         VARCHAR(100)       ,
+	fare_amount          BIGINT       ,
+	extra                BIGINT       ,
+	mta_tax              BIGINT       ,
+	improvement_surcharge BIGINT       ,
+	tip_amount           BIGINT       ,
+	tolls_amount         BIGINT       ,
+	total_amount         BIGINT       ,
+	congestion_surcharge BIGINT       ,
+	airport_fee          BIGINT       
+ ) engine=InnoDB;
+
+CREATE  TABLE `yellow taxi`.ratecode_dim ( 
+	rate_codeid          BIGINT  NOT NULL     PRIMARY KEY
+ ) engine=InnoDB;
+
+CREATE  TABLE `yellow taxi`.time_dim ( 
+	timeid               BIGINT  NOT NULL     PRIMARY KEY,
+	year                 VARCHAR(50)       ,
+	quarter              VARCHAR(50)       ,
+	month                VARCHAR(50)       ,
+	day                  VARCHAR(50)       ,
+	second               VARCHAR(50)       
+ ) engine=InnoDB;
+
+CREATE  TABLE `yellow taxi`.vendor_dim ( 
+	vendorid             BIGINT  NOT NULL     PRIMARY KEY
+ ) engine=InnoDB;
+
+CREATE  TABLE `yellow taxi`.trip_fact ( 
+	tripid               BIGINT  NOT NULL     PRIMARY KEY,
+	tpep_pickup_datetime DATE       ,
+	tpep_dropoff_datetime DATE       ,
+	trip_distance        VARCHAR(50)       ,
+	store_and_fwd_flag   VARCHAR(50)       ,
+	`time`               BIGINT       ,
+	location             BIGINT       ,
+	passenger            BIGINT       ,
+	vendor               BIGINT       ,
+	rate_code            BIGINT       ,
+	payment              BIGINT       
+ ) engine=InnoDB;
+
+ALTER TABLE `yellow taxi`.trip_fact ADD CONSTRAINT fk_trip_fact_time_dim FOREIGN KEY ( `time` ) REFERENCES `yellow taxi`.time_dim( timeid ) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+ALTER TABLE `yellow taxi`.trip_fact ADD CONSTRAINT fk_trip_fact_location_dim FOREIGN KEY ( location ) REFERENCES `yellow taxi`.location_dim( locationid ) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+ALTER TABLE `yellow taxi`.trip_fact ADD CONSTRAINT fk_trip_fact_passenger_dim FOREIGN KEY ( passenger ) REFERENCES `yellow taxi`.passenger_dim( passenger_id ) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+ALTER TABLE `yellow taxi`.trip_fact ADD CONSTRAINT fk_trip_fact_vendor_dim FOREIGN KEY ( vendor ) REFERENCES `yellow taxi`.vendor_dim( vendorid ) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+ALTER TABLE `yellow taxi`.trip_fact ADD CONSTRAINT fk_trip_fact_ratecode_dim FOREIGN KEY ( rate_code ) REFERENCES `yellow taxi`.ratecode_dim( rate_codeid ) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+ALTER TABLE `yellow taxi`.trip_fact ADD CONSTRAINT fk_trip_fact_payment_dim FOREIGN KEY ( payment ) REFERENCES `yellow taxi`.payment_dim( paymentid ) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
