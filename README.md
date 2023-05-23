@@ -4,7 +4,7 @@ This project analyzes the Green Cab, Yellow Cab, and For-Hire Vehicles (FHV) dat
 
 # Project Description
 
-Analysis of the Green Cab, Yellow Cab and for Hire Vehicle in New York City for the from July 2022 to December 2022 and the weather.
+Analysis of the Green Cab, Yellow Cab and for Hire Vehicle in New York City for the from July 2022 to December 2022. The project will focus on the taxi and FHV data in New York City from July 2022 to December 2022. The data will be collected from the New York City Taxi and Limousine Commission (NYC TLC). The data includes the date, time, pickup location, drop-off location, fare, and tip for each trip.
 
 # Project Milestones.
  
