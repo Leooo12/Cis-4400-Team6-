@@ -22,7 +22,6 @@ April 30th, 2023   Final Review
 
 TLC Trip Data: https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page
 
-Weather data: https://open-meteo.com
 
 
 # 1) Business Problem
