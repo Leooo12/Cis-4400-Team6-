@@ -24,48 +24,69 @@ TLC Trip Data: https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page
 
 Weather data: https://open-meteo.com
 
-# Requirements for the UI
- 
-Heat map for all 5 boroughs 
-Most busiest hour, less busiest hours, 
-revenue by taxi type
-Impact on the weather on the traffic
-Test
 
 # 1) Business Problem
  
-Give a description of the company.
-Give the requirements and any missing requirements you have found.
- 
+The New York City Taxi and Limousine Commission (NYC TLC) is responsible for licensing and regulating taxis and for-hire vehicles (FHVs) in New York City. The NYC TLC collects data on all taxi and FHV trips in the city, including the date, time, pickup location, drop-off location, fare, and tip. This data can be used to analyze the taxi and FHV industry in New York City, identify trends, and make recommendations for improving the industry.
+
+In this project, we will analyze the taxi and FHV data in New York City from July 2022 to December 2022. We will focus on the following research questions:
+
+How has the number of taxi and FHV trips changed in New York City over the past year?
+How do the fares and tips for taxi and FHV trips compare?
+What are the peak hours for taxi and FHV trips?
+What are the most popular pickup and drop-off locations for taxi and FHV trips?
  
 # 2) Business Impact
  
- You will need to consider any risks, cost, and benefits that are related to this project.  How the persona, company will benefits from it?
- 
-[It is useful if you can provide an estimated impact of your target/moonshot analysis. If things go exactly as planned, how much does your company beneﬁt? If things go much better than planned, how much does your company beneﬁt?]
+The results of this project will be used by the NYC TLC to improve the taxi and FHV industry in New York City. The NYC TLC can use the results to:
+
+Identify trends in the taxi and FHV industry
+Make recommendations for improving the taxi and FHV industry
+Monitor the performance of the taxi and FHV industry
  
  
 # 3) Business Persona
  
-Who are going to be the people who use the system? Who are the actors of the system?  
+The target audience for this project is the NYC TLC. The NYC TLC is responsible for licensing and regulating taxis and for-hire vehicles in New York City. The NYC TLC can use the results of this project to improve the taxi and FHV industry in New York City.
+
+
 
 # 4) Data
-The data sources that you are going to use and the metadata associated with them.
- 
- 
-[Tell us (at least approximately) how large your dataset is. Highlight both the strengths and weaknesses of your dataset(s).]
+The data for this project will be collected from the NYC TLC. The NYC TLC collects data on all taxi and FHV trips in the city, including the date, time, pickup location, drop-off location, fare, and tip. This data is available to the public on the NYC TLC website.
+
+Green Taxi File: 10,642 KB
+Yellow Taxi File: 398.924 KB
+FHV File: 92,834 KB
+
+Here are some of the strengths of the dataset:
+
+The dataset is comprehensive. It covers all taxi and FHV trips in New York City from July 2022 to December 2022.
+The dataset covers a large time period. This allows us to analyze trends in the taxi and FHV industry over time.
+Here are some of the weaknesses of the dataset:
+
+The dataset may not be complete. It is possible that some trips were not recorded.
+The dataset may not be accurate. The data may have been entered incorrectly or may have been tampered with.
+The data may not be in a format that is easy to analyze. The data is in a CSV format, which can be difficult to work with.
  
  
 # 5) Methods
-In this section, we will highlight some of the key tools and elements of our tech stack that we will be using for this project. As we learn and build upon our skills during this program, we hope to add additional tools to this section and improve upon some of our initial assumptions.
+We will use a variety of methods to analyze the taxi and FHV data in New York City from July 2022 to December 2022. These methods include:
+
+Data cleaning
+Data visualization
+Statistical analysis
  
 # 6) Data Tools
-Data Storage: What are the data storages that you are going to use.
- 
-Data Processing: How are you going to process/ingest the data?
- 
-Data Orchestration: Are you using any type of tools to automate your data pipeline
+We will use a variety of data tools to analyze the taxi and FHV data in New York City from July 2022 to December 2022. These tools include:
+
+Python
+Pandas
+Power BI
+Amazon Web Services
+Talend
  
 # 7) Interface
-The final interface will be a web-based application where the Persona can visualize the results.  People should be able also to connect to your  data using Tableau/PowerBI and do their own analysis.
+View charts and graphs of the data
+Download the data in a variety of formats
+Run custom queries on the data
  
